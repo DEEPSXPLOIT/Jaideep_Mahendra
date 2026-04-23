@@ -717,18 +717,18 @@ export default function Hero() {
 
   /* ── 12 Badges Config ── */
   const BADGES = [
-    { name: 'React', emoji: '⚛️', color: '#61DAFB', percent: '90%' },
-    { name: 'Next.js', emoji: '▲', color: '#a0a0a0', percent: '85%' },
-    { name: 'Node.js', emoji: '🟢', color: '#68A063', percent: '80%' },
-    { name: 'Firebase', emoji: '🔥', color: '#FFCA28', percent: '85%' },
-    { name: 'PostgreSQL', emoji: '🐘', color: '#336791', percent: '75%' },
-    { name: 'MySQL', emoji: '🐬', color: '#4479A1', percent: '80%' },
-    { name: 'PHP', emoji: '🟣', color: '#777BB4', percent: '70%' },
-    { name: 'Python', emoji: '🐍', color: '#3776AB', percent: '65%' },
-    { name: 'styled-comp.', emoji: '💅', color: '#DB7093', percent: '90%' },
-    { name: 'REST API', emoji: '🔌', color: '#009688', percent: '95%' },
-    { name: 'Three.js', emoji: '📐', color: '#000000', percent: '50%' },
-    { name: 'GSAP', emoji: '✨', color: '#88CE02', percent: '80%' },
+    { name: 'Python', emoji: '🐍', color: '#3776AB', percent: '85%' },
+    { name: 'SQL', emoji: '🐘', color: '#336791', percent: '90%' },
+    { name: 'API Integr.', emoji: '🔌', color: '#009688', percent: '95%' },
+    { name: 'ERP Systems', emoji: '⚙️', color: '#FF9900', percent: '90%' },
+    { name: 'Cisco Net.', emoji: '🌐', color: '#00BCEB', percent: '80%' },
+    { name: 'IT Ops', emoji: '💻', color: '#4CAF50', percent: '95%' },
+    { name: 'Supply Chain', emoji: '📦', color: '#FF5722', percent: '85%' },
+    { name: 'CRM', emoji: '🤝', color: '#673AB7', percent: '80%' },
+    { name: 'Asset Mgmt', emoji: '📊', color: '#00BCD4', percent: '90%' },
+    { name: 'Vendor Mgmt', emoji: '💼', color: '#795548', percent: '85%' },
+    { name: 'Agile', emoji: '🔄', color: '#E91E63', percent: '80%' },
+    { name: 'Tech Support', emoji: '🛠️', color: '#607D8B', percent: '90%' },
   ];
 
   /* ── Frame sequences ── */
@@ -1413,9 +1413,8 @@ export default function Hero() {
           </HeroActions>
 
           <SocialLinks>
-            <SocialIcon href="https://github.com/ElMehdiBekkous" target="_blank" rel="noopener noreferrer"><FiGithub /></SocialIcon>
-            <SocialIcon href="https://www.linkedin.com/in/el-mehdi-bekkous/" target="_blank" rel="noopener noreferrer"><FiLinkedin /></SocialIcon>
-            <SocialIcon href="https://www.instagram.com/mehdibekkousse/" target="_blank" rel="noopener noreferrer"><FiInstagram /></SocialIcon>
+            <SocialIcon href="https://github.com/DEEPSXPLOIT" target="_blank" rel="noopener noreferrer"><FiGithub /></SocialIcon>
+            <SocialIcon href="https://linkedin.com/in/jaideep-mahendra" target="_blank" rel="noopener noreferrer"><FiLinkedin /></SocialIcon>
           </SocialLinks>
         </TextColumn>
 
@@ -1469,7 +1468,7 @@ export default function Hero() {
             <AvatarFrame
               ref={frameImgRef}
               role="img"
-              aria-label="El Mehdi Bekkous 3D Avatar"
+              aria-label="Jaideep Mahendra 3D Avatar"
             />
           </AvatarWrapper>
         </AvatarColumn>

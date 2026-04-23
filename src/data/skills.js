@@ -1,48 +1,52 @@
-import { FaReact, FaNodeJs, FaGitAlt, FaDocker, FaFigma, FaAws } from 'react-icons/fa';
-import {
-    SiNextdotjs, SiTypescript, SiJavascript, SiMongodb,
-    SiFirebase, SiTailwindcss, SiStyledcomponents, SiPostgresql,
-    SiGraphql, SiPrisma, SiVercel, SiStripe
-} from 'react-icons/si';
+import { FaNetworkWired, FaServer, FaCogs, FaDatabase, FaPython, FaTruck, FaFileInvoiceDollar, FaHandsHelping, FaCubes } from 'react-icons/fa';
+import { SiCisco, SiSap, SiPostgresql, SiMysql, SiPython, SiPostman, SiMicrosoftazure } from 'react-icons/si';
+import { MdInventory, MdSupportAgent, MdSyncAlt } from 'react-icons/md';
 
 export const skillCategories = [
     {
-        title: 'Frontend',
-        description: 'Building beautiful, responsive interfaces',
-        icon: '🎨',
+        title: 'IT Operations & Support',
+        description: 'Managing technology assets, overseeing network infrastructure, and ensuring seamless IT services to support business operations.',
+        icon: '💻',
         skills: [
-            { name: 'React.js', icon: FaReact, level: 95, color: '#61DAFB' },
-            { name: 'Next.js', icon: SiNextdotjs, level: 95, color: '#FFFFFF' },
-            { name: 'TypeScript', icon: SiTypescript, level: 85, color: '#3178C6' },
-            { name: 'JavaScript', icon: SiJavascript, level: 95, color: '#F7DF1E' },
-            { name: 'Tailwind CSS', icon: SiTailwindcss, level: 90, color: '#06B6D4' },
-            { name: 'Styled Components', icon: SiStyledcomponents, level: 90, color: '#DB7093' },
+            { name: 'Asset Management', icon: FaCubes, level: 95, color: '#4CAF50' },
+            { name: 'ERP Systems', icon: SiSap, level: 90, color: '#008FD3' },
+            { name: 'Tech Support', icon: MdSupportAgent, level: 95, color: '#2196F3' },
+            { name: 'Vendor Mgmt', icon: FaHandsHelping, level: 85, color: '#FF9800' },
+            { name: 'Infrastructure', icon: FaServer, level: 85, color: '#9C27B0' },
         ],
     },
     {
-        title: 'Backend',
-        description: 'Scalable server-side solutions',
-        icon: '⚙️',
+        title: 'Networking & Infrastructure',
+        description: 'Cisco Networking, TCP/IP, Protocols',
+        icon: '🌐',
         skills: [
-            { name: 'Node.js', icon: FaNodeJs, level: 90, color: '#339933' },
-            { name: 'GraphQL', icon: SiGraphql, level: 80, color: '#E10098' },
-            { name: 'PostgreSQL', icon: SiPostgresql, level: 80, color: '#4169E1' },
-            { name: 'MongoDB', icon: SiMongodb, level: 85, color: '#47A248' },
-            { name: 'Prisma', icon: SiPrisma, level: 85, color: '#2D3748' },
-            { name: 'Firebase', icon: SiFirebase, level: 90, color: '#FFCA28' },
+            { name: 'Cisco Routing', icon: SiCisco, level: 80, color: '#1BA0D7' },
+            { name: 'Switching', icon: FaNetworkWired, level: 85, color: '#00BCD4' },
+            { name: 'Troubleshooting', icon: FaCogs, level: 90, color: '#607D8B' },
+            { name: 'Cloud Basics', icon: SiMicrosoftazure, level: 70, color: '#0089D6' },
         ],
     },
     {
-        title: 'DevOps & Tools',
-        description: 'Deployment & workflow optimization',
-        icon: '🚀',
+        title: 'Data & Systems Integration',
+        description: 'Leveraging SQL, Python, and API integrations to automate reporting, connect disparate systems, and drive data-backed decisions.',
+        icon: '🔌',
         skills: [
-            { name: 'Git', icon: FaGitAlt, level: 90, color: '#F05032' },
-            { name: 'Vercel', icon: SiVercel, level: 90, color: '#FFFFFF' },
-            { name: 'Docker', icon: FaDocker, level: 70, color: '#2496ED' },
-            { name: 'AWS', icon: FaAws, level: 65, color: '#FF9900' },
-            { name: 'Figma', icon: FaFigma, level: 80, color: '#F24E1E' },
-            { name: 'Stripe', icon: SiStripe, level: 80, color: '#635BFF' },
+            { name: 'Python', icon: SiPython, level: 80, color: '#3776AB' },
+            { name: 'SQL', icon: FaDatabase, level: 90, color: '#336791' },
+            { name: 'API Integrations', icon: MdSyncAlt, level: 95, color: '#E91E63' },
+            { name: 'API Testing', icon: SiPostman, level: 85, color: '#FF6C37' },
+        ],
+    },
+    {
+        title: 'Supply Chain & Logistics',
+        description: 'Optimizing inventory management, coordinating with vendors, and streamlining logistics workflows for maximum efficiency.',
+        icon: '📦',
+        skills: [
+            { name: 'Logistics', icon: FaTruck, level: 85, color: '#795548' },
+            { name: 'Inventory Mgmt', icon: MdInventory, level: 90, color: '#8BC34A' },
+            { name: 'Billing Systems', icon: FaFileInvoiceDollar, level: 95, color: '#F44336' },
+            { name: 'Procurement', icon: FaHandsHelping, level: 80, color: '#009688' },
         ],
     },
 ];
+

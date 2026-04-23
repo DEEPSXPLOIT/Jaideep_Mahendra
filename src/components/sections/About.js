@@ -122,28 +122,28 @@ const CardDesc = styled.p`
 
 const contentData = {
   default: {
-    title: "Centre de Commande",
-    desc: "Survolez ou touchez les éléments de mon bureau pour explorer ma stack, mes projets et mon expérience. Bougez le curseur pour faire pivoter la caméra.",
+    title: "Command Center",
+    desc: "Hover or touch the items on my desk to explore my skills, projects, and experience. Move the cursor to rotate the camera.",
     icon: "🚀"
   },
   laptop: {
-    title: "Expertise Full-Stack",
-    desc: "Création d'applications web robustes avec Next.js, React, Node.js et Firebase. Du backend jusqu'à l'interface utilisateur.",
+    title: "IT Operations Expertise",
+    desc: "Managing complex IT infrastructure, API integrations, and ensuring system reliability from hardware to software.",
     icon: "💻"
   },
   monitor: {
-    title: "Focus Actuel",
-    desc: "Exploration approfondie de l'IA, de Project IDX, et conception de solutions B2B intelligentes adaptées aux besoins réels.",
+    title: "Current Focus",
+    desc: "Building scalable logistics tracking systems and streamlining supply chain data flows for maximum efficiency.",
     icon: "🖥️"
   },
   coffee: {
-    title: "Le Carburant",
-    desc: "Transformation de la caféine en code propre et maintenable. Passionné par la résolution de problèmes et les rendus parfaits.",
+    title: "The Fuel",
+    desc: "Transforming coffee into optimized workflows and automated processes. Passionate about problem-solving and efficiency.",
     icon: "☕"
   },
   trophy: {
-    title: "Expérience",
-    desc: "Plus de 2 ans d'expérience professionnelle dans la réalisation d'applications de haute qualité, et le dépassement des attentes.",
+    title: "Experience",
+    desc: "Proven professional experience in IT operations, supply chain logistics, and delivering high-quality enterprise solutions.",
     icon: "🏆"
   }
 };
@@ -586,7 +586,7 @@ export default function About() {
       <CanvasContainer ref={mountRef}></CanvasContainer>
       <UILayer>
         <HeaderBox>
-          <Badge>CV Interactif</Badge>
+          <Badge>Interactive CV</Badge>
 
           <InfoContent className={isFading ? 'fade-out' : ''}>
             <TitleRow>

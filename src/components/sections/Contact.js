@@ -397,7 +397,7 @@ export default function Contact() {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('mehdi@example.com').catch(() => {});
+    navigator.clipboard.writeText('jaideepmahendrababu@gmail.com').catch(() => {});
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -442,7 +442,7 @@ export default function Contact() {
                 <InfoCardContent>
                   <InfoCardLabel>{t('contact.email')}</InfoCardLabel>
                   <InfoCardValue>
-                    {copiedEmail ? <span style={{ color: '#10b981' }}>{t('contact.copiedSucc') || 'Copied ✓'}</span> : 'mehdi@example.com'} 
+                    {copiedEmail ? <span style={{ color: '#10b981' }}>{t('contact.copiedSucc') || 'Copied ✓'}</span> : 'jaideepmahendrababu@gmail.com'} 
                     {!copiedEmail && <CopyHint>{t('contact.copyHint') || 'click to copy'}</CopyHint>}
                   </InfoCardValue>
                 </InfoCardContent>
@@ -464,14 +464,11 @@ export default function Contact() {
 
             <SocialsLabel>{t('contact.findMeOn') || 'Find me on'}</SocialsLabel>
             <SocialsRow>
-              <SocialBtn href="https://github.com/ElMehdiBekkous" target="_blank" title="GitHub">
+              <SocialBtn href="https://github.com/DEEPSXPLOIT" target="_blank" title="GitHub">
                 <FaGithub />
               </SocialBtn>
-              <SocialBtn href="https://www.linkedin.com/in/el-mehdi-bekkous/" target="_blank" title="LinkedIn">
+              <SocialBtn href="https://linkedin.com/in/jaideep-mahendra" target="_blank" title="LinkedIn">
                 <FaLinkedinIn />
-              </SocialBtn>
-              <SocialBtn href="https://www.instagram.com/mehdibekkousse/" target="_blank" title="Instagram">
-                <FaInstagram />
               </SocialBtn>
             </SocialsRow>
           </LeftPanel>

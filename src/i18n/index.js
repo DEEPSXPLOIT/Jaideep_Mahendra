@@ -13,11 +13,6 @@ export const localeList = [
  * Detect browser language and return matching locale code
  */
 export function detectLocale() {
-    if (typeof navigator === 'undefined') return 'en';
-    const lang = navigator.language || navigator.languages?.[0] || 'en';
-    const code = lang.split('-')[0].toLowerCase();
-    if (code === 'ar') return 'ar';
-    if (code === 'fr') return 'fr';
     return 'en';
 }
 

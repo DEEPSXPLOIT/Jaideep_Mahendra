@@ -330,7 +330,7 @@ export default function Footer() {
             </CtaBtn>
           </MagneticButton>
           <MagneticButton>
-            <CtaBtnOutline href="https://github.com/ElMehdiBekkous" target="_blank">
+            <CtaBtnOutline href="https://github.com/DEEPSXPLOIT" target="_blank">
               <FaGithub /> GitHub
             </CtaBtnOutline>
           </MagneticButton>
@@ -357,9 +357,8 @@ export default function Footer() {
             </BrandRow>
             <BrandDesc>{t('footer.brandDesc')}</BrandDesc>
             <FooterSocials>
-              <SocialBtn href="https://github.com/ElMehdiBekkous" target="_blank" title="GitHub"><FaGithub /></SocialBtn>
-              <SocialBtn href="https://www.linkedin.com/in/el-mehdi-bekkous/" target="_blank" title="LinkedIn"><FaLinkedinIn /></SocialBtn>
-              <SocialBtn href="https://www.instagram.com/mehdibekkousse/" target="_blank" title="Instagram"><FaInstagram /></SocialBtn>
+              <SocialBtn href="https://github.com/DEEPSXPLOIT" target="_blank" title="GitHub"><FaGithub /></SocialBtn>
+              <SocialBtn href="https://linkedin.com/in/jaideep-mahendra" target="_blank" title="LinkedIn"><FaLinkedinIn /></SocialBtn>
             </FooterSocials>
           </BrandCol>
 
@@ -384,7 +383,7 @@ export default function Footer() {
           <StatusCard>
             <StatusTitle>{t('footer.statusTitle') || 'Current Status'}</StatusTitle>
             <StatusBadge><GreenDot /> {t('contact.availableStatus') || 'Available for freelance'}</StatusBadge>
-            <EmailRow><FiMail size={12} /> mehdi@example.com</EmailRow>
+            <EmailRow><FiMail size={12} /> jaideepmahendrababu@gmail.com</EmailRow>
             <StatusBtn href="#contact" onClick={e => { e.preventDefault(); handleClick('contact'); }}>
               {t('nav.letsTalk')} →
             </StatusBtn>

@@ -410,25 +410,7 @@ export default function PreferencesPopup() {
         </ModalHeader>
 
         <ModalBody>
-          <Section>
-            <Label>
-              <LabelIcon>🌐</LabelIcon>
-              {t('preferences.language')}
-            </Label>
-            <LanguageGrid>
-              {localeList.map((l) => (
-                <LangOption
-                  key={l.code}
-                  $active={selectedLang === l.code}
-                  onClick={() => setSelectedLang(l.code)}
-                >
-                  <LangCheck $active={selectedLang === l.code}>✓</LangCheck>
-                  <LangFlag src={l.flag} alt={l.name} />
-                  <LangName $active={selectedLang === l.code}>{l.name}</LangName>
-                </LangOption>
-              ))}
-            </LanguageGrid>
-          </Section>
+
 
           <Section>
             <Label>

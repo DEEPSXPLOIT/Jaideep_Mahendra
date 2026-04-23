@@ -316,22 +316,7 @@ export default function Navbar() {
           </NavLinks>
 
           <NavActions>
-            <LangDropdown ref={langRef}>
-              <LangBtn onClick={() => setLangOpen(!langOpen)}>
-                <img src={currentLocale?.flag} alt={currentLocale?.name} style={{ width: '20px', height: '14px', borderRadius: '2px', objectFit: 'cover' }} /> <FiChevronDown />
-              </LangBtn>
-              <LangMenu $open={langOpen} $isRTL={isRTL}>
-                {localeList.map(l => (
-                  <LangMenuItem
-                    key={l.code}
-                    $active={locale === l.code}
-                    onClick={() => { setLocale(l.code); setLangOpen(false); }}
-                  >
-                    <img src={l.flag} alt={l.name} style={{ width: '20px', height: '14px', borderRadius: '2px', objectFit: 'cover' }} /> {l.name}
-                  </LangMenuItem>
-                ))}
-              </LangMenu>
-            </LangDropdown>
+
 
             <IconBtn onClick={toggleTheme} aria-label="Toggle theme">
               {isDark ? <FiSun /> : <FiMoon />}

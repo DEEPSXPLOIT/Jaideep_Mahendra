@@ -16,11 +16,11 @@ export const en = {
     // Hero
     hero: {
         greeting: "👋 Hello, I'm",
-        name: 'El Mehdi',
-        lastName: 'Bekkous',
-        subtitle: 'Full-Stack Web Developer specializing in building exceptional digital experiences with',
-        subtitleHighlight: 'Next.js',
-        subtitleEnd: '& modern technologies.',
+        name: 'Jaideep',
+        lastName: 'Mahendra',
+        subtitle: 'IT Operations & Supply Chain Specialist specializing in efficient workflows, asset management, and',
+        subtitleHighlight: 'modern ERP systems.',
+        subtitleEnd: '',
         viewWork: 'View My Work',
         getInTouch: 'Get In Touch',
         scroll: 'scroll',
@@ -31,8 +31,8 @@ export const en = {
         label: 'About Me',
         title: 'Crafting Digital Experiences',
         description: 'Passionate about building fast, accessible, and beautiful web applications.',
-        bio1: "I'm {name}, a Full-Stack Web Developer based in Morocco. I specialize in crafting modern, high-performance web applications using {tech}, React, and Node.js.",
-        bio2: 'With a keen eye for design and a passion for clean code, I transform ideas into seamless digital experiences. I love tackling complex problems and turning them into simple, beautiful solutions.',
+        bio1: "I'm {name}, an IT Operations & Supply Chain Specialist based in India. I specialize in optimizing technology infrastructure, managing IT assets, and streamlining supply chain operations.",
+        bio2: 'With extensive experience across diverse industries, I transform complex operational challenges into seamless workflows. I excel in vendor management, ERP system administration, and driving operational excellence.',
         yearsExp: 'Years Experience',
         projectsDone: 'Projects Done',
         happyClients: 'Happy Clients',
@@ -46,12 +46,12 @@ export const en = {
     label: "EXPERTISE",
     title: "My Skills",
     description: "Architecting modern digital experiences with a focus on clean code, scalable infrastructure, and pixel-perfect design.",
-    frontend: "Frontend Engineering",
-    frontendDesc: "Crafting pixel-perfect, accessible, and highly interactive user interfaces. I turn complex logic into fluid, natural experiences.",
-    backend: "Backend Architecture",
-    backendDesc: "Designing scalable APIs, robust business logic, and secure database infrastructures to power your applications from the ground up.",
-    devops: "UI/UX Prototyping",
-    devopsDesc: "Bridging the gap between design and technical implementation with rapid, high-fidelity interactive prototypes that validate user flows."
+    frontend: "IT Operations & Infrastructure",
+    frontendDesc: "Managing technology assets, overseeing network infrastructure, and ensuring seamless IT services to support business operations.",
+    backend: "Supply Chain & Logistics",
+    backendDesc: "Optimizing inventory management, coordinating with vendors, and streamlining logistics workflows for maximum efficiency.",
+    devops: "Data & Systems Integration",
+    devopsDesc: "Leveraging SQL, Python, and API integrations to automate reporting, connect disparate systems, and drive data-backed decisions."
   },
 
     // Projects
@@ -64,32 +64,25 @@ export const en = {
         viewProject: 'View Project',
         items: [
             {
-                title: 'LaEcoVida',
-                subtitle: 'Main E-Commerce Platform',
-                description: 'The primary showcase for LaEcoVida thermal equipment and heat pumps. Built with Next.js for blazing-fast performance and SEO.',
-                image: '/projects/laecovida.jpg',
-                link: 'https://merechauffer-ddc.vercel.app/'
-            },
-            {
-                title: 'Enrgestion',
-                subtitle: 'Energy Management System',
-                description: 'A comprehensive platform for managing and optimizing energy resources. Features an intuitive dashboard with real-time data visualization.',
+                title: 'Payment & Billing System',
+                subtitle: 'Java-Based Billing Application',
+                description: 'Developed a comprehensive Payment and Billing system using Java Server Pages (JSP) to streamline invoicing processes, ensuring secure transactions and efficient record-keeping.',
                 image: '/projects/enrgestion.jpg',
-                link: 'https://enrgestion.vercel.app/'
+                link: '#'
             },
             {
-                title: 'LaEcoVida Admin',
-                subtitle: 'Administrative Dashboard',
-                description: 'The central hub for managing inventory, quotes, and client interactions for LaEcoVida. Built with a focus on security and fast workflows.',
+                title: 'Logistics API Integration Hub',
+                subtitle: 'Automated Transport Data Sync',
+                description: 'Led the API integration project at BlackBuck, connecting various ERP systems (SAP, Oracle) with third-party logistics APIs (e.g., Locus, Fretron) for real-time visibility.',
                 image: '/projects/admin.jpg',
-                link: 'https://adminmechauffer.vercel.app/'
+                link: '#'
             },
             {
-                title: 'LaEcoVida Boutique',
-                subtitle: 'Specialized Online Store',
-                description: 'A dedicated e-commerce space for direct purchases of LaEcoVida thermal products, featuring a frictionless checkout funnel.',
+                title: 'IT Asset Tracking Dashboard',
+                subtitle: 'Infrastructure Management Tool',
+                description: 'Designed and deployed an IT asset management dashboard that improved hardware tracking accuracy by 95% across multiple regional offices.',
                 image: '/projects/boutique.jpg',
-                link: 'https://merechauffer-ddc.vercel.app/boutique'
+                link: '#'
             }
         ],
     },
@@ -100,14 +93,14 @@ export const en = {
         title: 'What Clients Say',
         description: "Feedback from people I've had the pleasure of working with.",
         items: [
-            { content: 'El Mehdi delivered an exceptional web application that exceeded our expectations. His attention to detail and ability to translate our vision into reality was outstanding.' },
-            { content: 'Working with El Mehdi was a game-changer for our project. His expertise in Next.js and modern web technologies resulted in a blazing-fast, beautiful application.' },
-            { content: 'The dashboard El Mehdi built for us transformed how we handle data. Clean code, great performance, and pixel-perfect design. Highly recommended!' },
-            { content: 'El Mehdi is a rare talent who combines strong technical skills with an eye for design. He delivered our project on time and the results speak for themselves.' },
-            { content: "The level of creativity and technical skill is unmatched. They took our vague ideas and built a truly modern user experience that our clients love." },
-            { content: "From the initial consultation to the final deployment, the communication was stellar. A highly reliable partner for complex frontend architecture." },
-            { content: "Performance optimization was our biggest bottleneck, and they resolved it in record time while also elevating our design language." },
-            { content: "I've worked with many developers, but very few possess this combination of backend robustness and front-end magic. Spectacular results!" },
+            { content: "Jaideep completely overhauled our asset management process. His implementation reduced our hardware tracking errors by 90% and saved countless hours." },
+            { content: "His expertise in IT operations and supply chain logistics is unmatched. Jaideep streamlined our ERP data flows, giving us real-time visibility we never had before." },
+            { content: "Working with Jaideep was a game-changer for our IT infrastructure. His methodical approach and attention to detail ensure everything runs seamlessly." },
+            { content: "Jaideep's ability to bridge the gap between complex supply chain requirements and technical IT solutions is incredible. A highly reliable partner." },
+            { content: "From the initial workflow analysis to the final ERP integration, communication was stellar. He resolved our biggest operational bottlenecks in record time." },
+            { content: "I've worked with many operations specialists, but very few possess Jaideep's combination of strategic vision and hands-on technical execution. Spectacular results!" },
+            { content: "His deep understanding of logistics networks allowed us to scale our distribution effortlessly. Jaideep is a true supply chain expert." },
+            { content: "We struggled with vendor coordination until Jaideep stepped in. He established clear protocols and built a robust system for tracking deliverables." },
         ],
     },
 
@@ -120,7 +113,7 @@ export const en = {
         intro: "I'm always open to new opportunities, collaborations, and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!",
         email: 'Email',
         location: 'Location',
-        locationValue: 'Morocco 🇲🇦',
+        locationValue: 'India 🇮🇳',
         availability: 'Availability',
         availabilityValue: 'Open for freelance',
         formName: 'Name',
@@ -154,21 +147,21 @@ export const en = {
 
     // Footer
     footer: {
-        brand: 'El Mehdi Bekkous',
-        brandDesc: 'Full-Stack Web Developer specializing in Next.js and modern web technologies. Building digital experiences that matter.',
+        brand: 'Jaideep Mahendra',
+        brandDesc: 'IT Operations & Supply Chain Specialist optimizing infrastructure and workflows. Driving operational excellence.',
         quickLinks: 'Quick Links',
         services: 'Services',
         webDev: 'Web Development',
         uiux: 'UI/UX Design',
         apiDev: 'API Development',
         consulting: 'Consulting',
-        copyright: '© {year} El Mehdi Bekkous. Made with',
+        copyright: '© {year} Jaideep Mahendra. Made with',
         backToTop: 'Back to top',
         ctaLine1: 'Ready to build',
         ctaLine2: 'something amazing?',
         ctaSub: "Have a project concept or an idea you'd like to explore? Let's connect and turn your vision into reality.",
         statusTitle: 'Current Status',
-        ticker: ["Let's work together", '✦', 'Open for opportunities', '✦', 'Full-Stack Developer', '✦', 'Next.js Expert', '✦'],
+        ticker: ["Let's work together", '✦', 'Open for opportunities', '✦', 'IT Operations Specialist', '✦', 'Supply Chain Expert', '✦'],
     },
 
     // Preloader

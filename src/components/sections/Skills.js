@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import SectionWrapper from '@/components/SectionWrapper';
 import { useLanguage } from '@/context/LanguageContext';
-import { FiLayout, FiDatabase, FiPenTool, FiTerminal, FiCode, FiLayers } from 'react-icons/fi';
+import { FiLayout, FiDatabase, FiPenTool, FiTerminal, FiCode, FiLayers, FiServer, FiBox } from 'react-icons/fi';
 
 const BentoGrid = styled.div`
   display: grid;
@@ -265,7 +265,7 @@ export default function Skills() {
             <CardTitle>{t('skills.frontend')}</CardTitle>
             <CardDesc style={{ maxWidth: '400px' }}>{t('skills.frontendDesc')}</CardDesc>
             <TechTags>
-              {['React', 'Next.js', 'Tailwind', 'GSAP'].map(tech => (
+              {['ServiceNow', 'Active Directory', 'Cisco', 'Asset Management', 'ITIL'].map(tech => (
                 <TechTag key={tech}>{tech}</TechTag>
               ))}
             </TechTags>
@@ -296,7 +296,7 @@ export default function Skills() {
                 <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <div style={{ width: '2rem', height: '2rem', borderRadius: '50%', background: 'rgba(108,99,255,0.2)', border: '1px solid rgba(108,99,255,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <FiCode size={14} color="#a5b4fc" />
+                      <FiServer size={14} color="#a5b4fc" />
                     </div>
                     <div style={{ height: '0.75rem', width: '6rem', background: 'rgba(108,99,255,0.2)', borderRadius: '0.375rem' }} />
                   </div>
@@ -321,7 +321,7 @@ export default function Skills() {
             <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
               {[1, 2, 3].map((node) => (
                 <div key={node} style={{ width: '100%', maxWidth: '180px', padding: '0.75rem', borderRadius: '0.5rem', background: 'rgba(30,41,59,0.5)', border: '1px solid rgba(16,185,129,0.2)', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                  <FiTerminal size={14} color="#10b981" />
+                  <FiBox size={14} color="#10b981" />
                   <div style={{ height: '6px', width: '100%', background: '#334155', borderRadius: '9999px', overflow: 'hidden' }}>
                     <div style={{ height: '100%', background: '#10b981', borderRadius: '9999px', width: `${(node / 3) * 100}%` }} />
                   </div>
@@ -331,7 +331,7 @@ export default function Skills() {
           </BackendGraphic>
 
           <TechTags>
-            {['Node.js', 'PostgreSQL', 'Redis', 'AWS'].map(tech => (
+            {['SAP ERP', 'Oracle SCM', 'Logistics', 'Vendor Mgt', 'Inventory'].map(tech => (
               <TechTag key={tech}>{tech}</TechTag>
             ))}
           </TechTags>
@@ -344,7 +344,7 @@ export default function Skills() {
             <CardTitle>{t('skills.devops')}</CardTitle>
             <CardDesc style={{ maxWidth: '400px' }}>{t('skills.devopsDesc')}</CardDesc>
             <TechTags>
-              {['Figma', 'Framer', 'Storybook'].map(tech => (
+              {['SQL', 'Python', 'PowerBI', 'REST APIs', 'ETL'].map(tech => (
                 <TechTag key={tech}>{tech}</TechTag>
               ))}
             </TechTags>
@@ -356,7 +356,7 @@ export default function Skills() {
               <div style={{ position: 'absolute', bottom: '25%', right: '-0.5rem', width: '1.5rem', height: '1.5rem', borderRadius: '50%', background: 'rgba(108,99,255,0.2)', border: '1px solid rgba(108,99,255,0.5)', backdropFilter: 'blur(4px)' }} />
               <div style={{ position: 'absolute', bottom: '25%', left: '-0.5rem', width: '2.5rem', height: '2.5rem', borderRadius: '50%', background: 'rgba(16,185,129,0.2)', border: '1px solid rgba(16,185,129,0.5)', backdropFilter: 'blur(4px)' }} />
               <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: '#475569' }}>
-                <FiLayers size={40} />
+                <FiDatabase size={40} />
               </div>
             </div>
           </UIGraphic>
