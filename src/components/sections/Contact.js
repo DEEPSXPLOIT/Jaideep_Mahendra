@@ -370,7 +370,7 @@ export default function Contact() {
 
   const topics = t('contact.topics', { returnObjects: true }) || ['Freelance project', 'Collaboration', 'Job opportunity', 'Just saying hi 👋'];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = {};
     if (!name.trim()) newErrors.name = true;
@@ -384,16 +384,44 @@ export default function Contact() {
     }
     
     setStatus('sending');
-    setTimeout(() => {
-      setStatus('success');
-      setTimeout(() => {
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "a3ee1d58-7a65-432f-b0cb-21c118281a55",
+          subject: selectedChip ? `Portfolio Contact: ${selectedChip}` : "New Contact from Portfolio",
+          name: name,
+          email: email,
+          message: message,
+        }),
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setStatus('success');
+        setTimeout(() => {
+          setStatus('idle');
+          setName('');
+          setEmail('');
+          setMessage('');
+          setSelectedChip(null);
+        }, 4000);
+      } else {
+        console.error("Submission failed:", result);
         setStatus('idle');
-        setName('');
-        setEmail('');
-        setMessage('');
-        setSelectedChip(null);
-      }, 4000);
-    }, 1500);
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus('idle');
+      alert("Network error. Please try again later.");
+    }
   };
 
   const copyEmail = () => {
