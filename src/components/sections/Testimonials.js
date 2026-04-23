@@ -296,7 +296,7 @@ const Testimonials = () => {
 
     const imgData = octx.getImageData(0, 0, offW, offH);
     const particles = [];
-    const STEP = 5; // Tighter steps for better fidelity on large logo
+    const STEP = 15; // Increased step size to drastically reduce particle count and fix lag
 
     for (let y = 0; y < offH; y += STEP) {
       for (let x = 0; x < offW; x += STEP) {
@@ -307,15 +307,15 @@ const Testimonials = () => {
             x, y,
             homeX: x, homeY: y,
             vx: 0, vy: 0,
-            r: 2.2 + Math.random() * 1.2,
+            r: 2.2 + Math.random() * 1.5,
             color: isAccent ? '#0EA5E9' : '#3B82F6', // Blue theme override
           });
         }
       }
     }
 
-    const REPEL_RADIUS = 70;
-    const REPEL_FORCE = 6;
+    const REPEL_RADIUS = 90; // slightly larger interaction area to make up for fewer particles
+    const REPEL_FORCE = 8;
     const SPRING = 0.1;
     const DAMPING = 0.75;
     let animId;
@@ -362,15 +362,8 @@ const Testimonials = () => {
         ctx.beginPath();
         ctx.arc(p.x + centerOffsetX, p.y + centerOffsetY, p.r, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
-
-        if (!isMobile && dist < REPEL_RADIUS && mouseCanvasX > 0) {
-          ctx.shadowColor = p.color;
-          ctx.shadowBlur = 8 * ((REPEL_RADIUS - dist) / REPEL_RADIUS);
-        } else {
-          ctx.shadowBlur = 0;
-        }
+        // Removed heavy ctx.shadowBlur which causes 99% of canvas lag
         ctx.fill();
-        ctx.shadowBlur = 0;
       }
       animId = requestAnimationFrame(draw);
     };
