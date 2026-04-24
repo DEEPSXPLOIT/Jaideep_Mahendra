@@ -197,10 +197,11 @@ export default function About() {
 
     const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true });
     renderer.setSize(width, height);
-    renderer.setPixelRatio(isMobile ? 1.0 : Math.min(window.devicePixelRatio, 2));
-    renderer.shadowMap.enabled = !isMobile; // Disable shadow maps on mobile
+    // Hard limit pixel ratio to 1 for maximum performance
+    renderer.setPixelRatio(1.0);
+    renderer.shadowMap.enabled = false; // Completely disable shadows for performance
     if (!isMobile) {
-      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      // renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     }
     container.appendChild(renderer.domElement);
 
@@ -210,7 +211,7 @@ export default function About() {
     const dirLight = new THREE.DirectionalLight(0xfff0dd, 1.2);
     dirLight.position.set(5, 12, 8);
     if (!isMobile) {
-      dirLight.castShadow = true;
+      dirLight.castShadow = false; // Disable heavy shadow calculation
       dirLight.shadow.mapSize.width = 1024;
       dirLight.shadow.mapSize.height = 1024;
       dirLight.shadow.camera.near = 0.5;
@@ -509,7 +510,7 @@ export default function About() {
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
       renderer.setSize(width, height);
-      renderer.setPixelRatio(isMobile ? 1.0 : Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(1.0); // Keep at 1.0
       checkIntersections();
     };
 
