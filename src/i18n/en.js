@@ -1,4 +1,29 @@
 export const en = {
+    avatar: {"putOn": "Put on sunglasses", "remove": "Remove sunglasses", "changing": "Changing the look…", "replay": "Replay the gesture", "on": "Sunglasses on", "off": "Your next IT & data teammate.", "loading": "Getting ready…", "altOn": "3D-style avatar of Jaideep Mahendra wearing sunglasses, with black hair, a trimmed beard, black blazer, and peach shirt", "altOff": "3D-style avatar of Jaideep Mahendra with black hair, a trimmed beard, black blazer, and peach shirt"},
+
+    career: {assets: 'Managed workstations', tickets: 'Support tickets / month', demos: 'Working demos'},
+
+    ref: {highlights: 'Featured Highlights', home: 'Home', focus: 'Operational focus', previous: 'Previous highlight', next: 'Next highlight', slide: 'Highlight'},
+
+    design: {
+        headline: 'Making complex',
+        highlight: 'work. Simple.',
+        hello: 'Hello there',
+        portfolio: 'Selected portfolio',
+        profile: 'The person behind the process',
+        explore: 'Explore the portfolio',
+    },
+
+    overview: {
+        role: 'IT Support & Data Analysis',
+        title: 'Connecting technology with better operations.',
+        focus: 'Bengaluru, India · Technical support · ERP operations · SQL reporting',
+        filterLabel: 'Filter projects by expertise',
+        academic: 'Academic',
+        discuss: 'Discuss this project',
+        categories: { 'Software Development': 'Software Development', 'Data & Systems Integration': 'Systems Integration', 'IT Operations': 'IT Operations' },
+    },
+
     dir: 'ltr',
     langName: 'English',
     langFlag: '🇬🇧',
@@ -6,6 +31,7 @@ export const en = {
     // Navbar
     nav: {
         about: 'About',
+        experience: 'Experience',
         skills: 'Skills',
         projects: 'Projects',
         testimonials: 'Testimonials',
@@ -18,8 +44,8 @@ export const en = {
         greeting: "👋 Hello, I'm",
         name: 'Jaideep',
         lastName: 'Mahendra',
-        subtitle: 'IT Operations & Supply Chain Specialist specializing in efficient workflows, asset management, and',
-        subtitleHighlight: 'modern ERP systems.',
+        subtitle: 'Assistant Manager at NT Aerospace with hands-on experience in workstation support, ERP administration, and',
+        subtitleHighlight: 'data-driven process improvement.',
         subtitleEnd: '',
         viewWork: 'View My Work',
         getInTouch: 'Get In Touch',
@@ -29,9 +55,9 @@ export const en = {
     // About
     about: {
         label: 'About Me',
-        title: 'Crafting Digital Experiences',
-        description: 'Passionate about building fast, accessible, and beautiful web applications.',
-        bio1: "I'm {name}, an IT Operations & Supply Chain Specialist based in India. I specialize in optimizing technology infrastructure, managing IT assets, and streamlining supply chain operations.",
+        title: 'Technology that keeps operations moving',
+        description: 'Managing IT assets, connecting ERP systems, and simplifying logistics workflows.',
+        bio1: "I'm {name}, based in Bengaluru. I manage IT operations and supply chain workflows at NT Aerospace, combining workstation troubleshooting, ERP administration, and process automation. My BlackBuck internship included logistics API integrations, database design, and automated SQL reporting.",
         bio2: 'With extensive experience across diverse industries, I transform complex operational challenges into seamless workflows. I excel in vendor management, ERP system administration, and driving operational excellence.',
         yearsExp: 'Years Experience',
         projectsDone: 'Projects Done',
@@ -45,10 +71,10 @@ export const en = {
     skills: {
     label: "EXPERTISE",
     title: "My Skills",
-    description: "Architecting modern digital experiences with a focus on clean code, scalable infrastructure, and pixel-perfect design.",
+    description: "Practical expertise across infrastructure, logistics, and systems integration — connecting the tools and processes that keep a business running.",
     frontend: "IT Operations & Infrastructure",
     frontendDesc: "Managing technology assets, overseeing network infrastructure, and ensuring seamless IT services to support business operations.",
-    backend: "Supply Chain & Logistics",
+    backend: "ERP & Asset Operations",
     backendDesc: "Optimizing inventory management, coordinating with vendors, and streamlining logistics workflows for maximum efficiency.",
     devops: "Data & Systems Integration",
     devopsDesc: "Leveraging SQL, Python, and API integrations to automate reporting, connect disparate systems, and drive data-backed decisions."
@@ -58,10 +84,10 @@ export const en = {
     projects: {
         label: 'Portfolio',
         title: 'Featured Projects',
-        description: "Some of my recent work that I'm proud of.",
+        description: "Five working portfolio demos for IT support and data analysis. Try the tools, inspect the sample data, and download the results. These demos use synthetic data and are separate from employer projects.",
         all: 'All',
         scrollHint: 'Scroll Down ↓',
-        viewProject: 'View Project',
+        viewProject: 'Open working demo',
         items: [
             {
                 title: 'Payment & Billing System',
@@ -113,7 +139,7 @@ export const en = {
         intro: "I'm always open to new opportunities, collaborations, and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!",
         email: 'Email',
         location: 'Location',
-        locationValue: 'India 🇮🇳',
+        locationValue: 'Bengaluru, India',
         availability: 'Availability',
         availabilityValue: 'Open for freelance',
         formName: 'Name',

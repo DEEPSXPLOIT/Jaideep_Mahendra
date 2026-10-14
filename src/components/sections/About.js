@@ -583,7 +583,7 @@ export default function About() {
   }, [themeContext]);
 
   return (
-    <AboutSection id="about" $isRTL={isRTL}>
+    <AboutSection id="workspace" $isRTL={isRTL}>
       <CanvasContainer ref={mountRef}></CanvasContainer>
       <UILayer>
         <HeaderBox>

@@ -1,4 +1,29 @@
 export const fr = {
+    avatar: {"putOn": "Mettre les lunettes", "remove": "Retirer les lunettes", "changing": "Changement de style…", "replay": "Rejouer le geste", "on": "Lunettes en place", "off": "Votre prochain collègue IT et data.", "loading": "Préparation…", "altOn": "Avatar 3D de Jaideep Mahendra portant des lunettes de soleil", "altOff": "Avatar 3D de Jaideep Mahendra, cheveux noirs, barbe, veste noire et haut pêche"},
+
+    career: {assets: 'Postes gérés', tickets: 'Tickets de support / mois', demos: 'Démos fonctionnelles'},
+
+    ref: {highlights: 'Projets à la une', home: 'Accueil', focus: 'Orientation opérationnelle', previous: 'Projet précédent', next: 'Projet suivant', slide: 'Projet'},
+
+    design: {
+        headline: 'Simplifier le',
+        highlight: 'travail complexe.',
+        hello: 'Bonjour',
+        portfolio: 'Portfolio sélectionné',
+        profile: 'La personne derrière les processus',
+        explore: 'Explorer le portfolio',
+    },
+
+    overview: {
+        role: 'Spécialiste des opérations IT et de la chaîne logistique',
+        title: 'Relier la technologie à des opérations efficaces.',
+        focus: 'Basé en Inde · Actifs IT · Systèmes ERP · Intégration logistique',
+        filterLabel: 'Filtrer les projets par expertise',
+        academic: 'Universitaire',
+        discuss: 'Discuter de ce projet',
+        categories: { 'Software Development': 'Développement logiciel', 'Data & Systems Integration': 'Intégration des systèmes', 'IT Operations': 'Opérations IT' },
+    },
+
     dir: 'ltr',
     langName: 'Français',
     langFlag: '🇫🇷',

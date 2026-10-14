@@ -1,61 +1,22 @@
-'use client';
-import { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { locales, detectLocale, getTranslation } from '@/i18n';
+ 'use client';
+import {createContext,useContext,useEffect} from 'react';
+import {getTranslation} from '@/i18n';
 
-const LanguageContext = createContext();
-
-export function LanguageProvider({ children }) {
-    const [locale, setLocaleState] = useState('en');
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-        const stored = localStorage.getItem('portfolio-locale');
-        if (stored && locales[stored]) {
-            setLocaleState(stored);
-        } else {
-            setLocaleState(detectLocale());
-        }
-    }, []);
-
-    const setLocale = useCallback((code) => {
-        if (locales[code]) {
-            setLocaleState(code);
-            localStorage.setItem('portfolio-locale', code);
-        }
-    }, []);
-
-    const t = useCallback((key) => {
-        return getTranslation(locale, key);
-    }, [locale]);
-
-    const dir = locales[locale]?.dir || 'ltr';
-    const isRTL = dir === 'rtl';
-
-    useEffect(() => {
-        if (mounted) {
-            document.documentElement.setAttribute('lang', locale);
-            document.documentElement.setAttribute('dir', dir);
-        }
-    }, [locale, dir, mounted]);
-
-    return (
-        <LanguageContext.Provider value={{ locale, setLocale, t, dir, isRTL }}>
-            {children}
-        </LanguageContext.Provider>
-    );
+const englishContext={
+  locale:'en',
+  dir:'ltr',
+  isRTL:false,
+  t:key=>getTranslation('en',key),
+  // Retain compatibility with unused legacy preference components.
+  setLocale:()=>{},
+};
+const LanguageContext=createContext(englishContext);
+export function LanguageProvider({children}){
+  useEffect(()=>{
+    document.documentElement.setAttribute('lang','en');
+    document.documentElement.setAttribute('dir','ltr');
+    try{localStorage.removeItem('portfolio-locale');}catch{}
+  },[]);
+  return <LanguageContext.Provider value={englishContext}>{children}</LanguageContext.Provider>;
 }
-
-export function useLanguage() {
-    const context = useContext(LanguageContext);
-    if (!context) {
-        return {
-            locale: 'en',
-            setLocale: () => { },
-            t: (key) => key,
-            dir: 'ltr',
-            isRTL: false,
-        };
-    }
-    return context;
-}
+export function useLanguage(){return useContext(LanguageContext);}

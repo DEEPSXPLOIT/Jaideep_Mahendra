@@ -96,10 +96,10 @@ const EyebrowText = styled.span`
   color: ${({ theme }) => theme.colors.accentLight || '#06b6d4'};
 `;
 
-const SectionTitle = styled.h1`
-  font-family: ${({ theme }) => theme.fonts?.primary || "'Syne', sans-serif"};
-  font-size: clamp(52px, 8vw, 96px);
-  font-weight: 800;
+const SectionTitle = styled.h2`
+  font-family: ${({ theme }) => theme.fonts.heading};
+  font-size: clamp(44px, 7vw, 80px);
+  font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.03em;
   margin-bottom: 16px;
@@ -110,8 +110,7 @@ const TitleLine1 = styled.div`
   color: ${({ theme }) => theme.colors.text};
 `;
 const TitleLine2 = styled.div`
-  -webkit-text-stroke: 1.5px ${({ theme }) => theme.colors.border};
-  color: transparent;
+  color: ${({ theme }) => theme.colors.text};
   ${({ $accent, theme }) => $accent && `
     background: linear-gradient(135deg, ${theme.colors.accent}, ${theme.colors.accentLight || '#06b6d4'});
     -webkit-background-clip: text;
@@ -240,7 +239,7 @@ const FormHeader = styled.div`
   display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px;
 `;
 const FormTitle = styled.div`
-  font-family: ${({ theme }) => theme.fonts?.primary || "'Syne', sans-serif"}; font-size: 18px; font-weight: 700; color: ${({ theme }) => theme.colors.text};
+  font-family: ${({ theme }) => theme.fonts.heading}; font-size: 18px; font-weight: 700; color: ${({ theme }) => theme.colors.text};
 `;
 const FormCounter = styled.div`
   font-size: 11px; color: ${({ theme }) => theme.colors.textMuted}; font-variant-numeric: tabular-nums;
@@ -305,9 +304,10 @@ const gradientShift = keyframes`
 `;
 const SubmitBtn = styled.button`
   width: 100%; padding: 16px; border-radius: 14px; border: none; cursor: pointer;
-  font-family: ${({ theme }) => theme.fonts?.primary || "'Syne', sans-serif"}; font-size: 15px; font-weight: 700;
+  font-family: ${({ theme }) => theme.fonts.heading}; font-size: 15px; font-weight: 700;
   letter-spacing: 0.04em; color: white; position: relative; overflow: hidden; transition: transform 0.2s ease;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.accent} 0%, #9333ea 40%, ${({ theme }) => theme.colors.accentLight || '#06b6d4'} 100%);
+  background: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.bg};
   background-size: 200% 200%; animation: ${gradientShift} 4s ease infinite;
   &::before {
     content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
@@ -346,7 +346,7 @@ const SuccessIcon = styled.div`
   animation: ${({ $show }) => $show ? scaleIn : 'none'} 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards;
 `;
 const SuccessTitle = styled.div`
-  font-family: ${({ theme }) => theme.fonts?.primary || "'Syne', sans-serif"}; font-size: 22px; font-weight: 800; color: ${({ theme }) => theme.colors.text};
+  font-family: ${({ theme }) => theme.fonts.heading}; font-size: 22px; font-weight: 500; color: ${({ theme }) => theme.colors.text};
 `;
 const SuccessSub = styled.div`
   font-size: 12px; color: ${({ theme }) => theme.colors.textMuted}; text-align: center; max-width: 240px; line-height: 1.7;
@@ -374,7 +374,7 @@ export default function Contact() {
     e.preventDefault();
     const newErrors = {};
     if (!name.trim()) newErrors.name = true;
-    if (!email.trim()) newErrors.email = true;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) newErrors.email = true;
     if (!message.trim()) newErrors.message = true;
     
     if (Object.keys(newErrors).length > 0) {
@@ -424,19 +424,23 @@ export default function Contact() {
     }
   };
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText('jaideepmahendrababu@gmail.com').catch(() => {});
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('jaideepmahendrababu@gmail.com');
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } catch {
+      window.location.href = 'mailto:jaideepmahendrababu@gmail.com';
+    }
   };
 
   return (
     <ContactSection id="contact">
       <NoiseOverlay />
-      <GridBg $isRTL={isRTL} />
-      <Orb1 />
-      <Orb2 />
-      <Orb3 />
+
+
+
+
 
       <ContactContainer>
         <SectionEyebrow>
@@ -461,7 +465,7 @@ export default function Contact() {
             </StatusBadge>
 
             <ContactInfoCards>
-              <InfoCard onClick={copyEmail} $isRTL={isRTL}>
+              <InfoCard as="button" type="button" style={{ width: '100%', textAlign: 'start' }} onClick={copyEmail} $isRTL={isRTL}>
                 <InfoCardIcon $color="#a78bfa">
                   <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
@@ -502,7 +506,7 @@ export default function Contact() {
           </LeftPanel>
 
           <FormPanel>
-            <SuccessOverlay $show={status === 'success'}>
+            <SuccessOverlay aria-hidden={status !== 'success'} $show={status === 'success'}>
               <SuccessIcon $show={status === 'success'}>✓</SuccessIcon>
               <SuccessTitle>{t('contact.successTitle') || 'Message sent!'}</SuccessTitle>
               <SuccessSub>{t('contact.successSub') || "Thanks for reaching out. I'll get back to you within 24 hours."}</SuccessSub>
@@ -525,9 +529,9 @@ export default function Contact() {
 
             <FormGrid>
               <FieldGroup>
-                <FieldLabel>{t('contact.formName') || 'Name'}</FieldLabel>
+                <FieldLabel htmlFor="contact-name">{t('contact.formName') || 'Name'}</FieldLabel>
                 <FieldInput 
-                  type="text" 
+                  type="text" id="contact-name" autoComplete="name" aria-required="true" aria-invalid={!!errors.name}
                   placeholder={t('contact.namePlaceholder') || "Your name"}
                   value={name} 
                   onChange={(e) => setName(e.target.value)} 
@@ -535,9 +539,9 @@ export default function Contact() {
                 />
               </FieldGroup>
               <FieldGroup>
-                <FieldLabel>{t('contact.formEmail') || 'Email'}</FieldLabel>
+                <FieldLabel htmlFor="contact-email">{t('contact.formEmail') || 'Email'}</FieldLabel>
                 <FieldInput 
-                  type="email" 
+                  type="email" id="contact-email" autoComplete="email" aria-required="true" aria-invalid={!!errors.email}
                   placeholder={t('contact.emailPlaceholder') || "your@email.com"}
                   value={email} 
                   onChange={(e) => setEmail(e.target.value)} 
@@ -545,8 +549,8 @@ export default function Contact() {
                 />
               </FieldGroup>
               <FieldGroup $full>
-                <FieldLabel>{t('contact.formMessage') || 'Message'}</FieldLabel>
-                <FieldTextarea 
+                <FieldLabel htmlFor="contact-message">{t('contact.formMessage') || 'Message'}</FieldLabel>
+                <FieldTextarea id="contact-message" aria-required="true" aria-invalid={!!errors.message}
                   placeholder={t('contact.msgPlaceholder') || "Tell me about your project..."}
                   value={message} 
                   onChange={(e) => setMessage(e.target.value)} 

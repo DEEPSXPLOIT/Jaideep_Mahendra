@@ -58,7 +58,7 @@ const GlobalStyles = createGlobalStyle`
 
   ::selection {
     background: ${({ theme }) => theme.colors.accent};
-    color: #fff;
+    color: #151710;
   }
 
   ::-webkit-scrollbar {
@@ -78,6 +78,11 @@ const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.colors.accentLight};
   }
 
+  body::before {
+    content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background-image: radial-gradient(${({theme})=>theme.colors.border} 1px, transparent 1px);
+    background-size: 28px 28px; opacity: .25;
+  }
   /* Noise overlay */
   body::after {
     content: '';
@@ -90,6 +95,27 @@ const GlobalStyles = createGlobalStyle`
     z-index: 9999;
     opacity: 0.015;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  :focus-visible {
+    outline: 3px solid ${({ theme }) => theme.colors.accentDark};
+    outline-offset: 5px;
+  }
+  section[id], main[id] { scroll-margin-top: 100px; }
+  .skip-link {
+    position: fixed; top: 12px; left: 12px; z-index: 100002;
+    padding: .75rem 1rem; border-radius: 8px;
+    background: ${({ theme }) => theme.colors.surface};
+    transform: translateY(-200%);
+  }
+  .skip-link:focus { transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+    }
   }
 
   /* Section base styles */

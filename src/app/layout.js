@@ -4,12 +4,12 @@ import { LanguageProvider } from '@/context/LanguageContext';
 import GlobalStyles from '@/styles/GlobalStyles';
 
 export const metadata = {
-    title: 'Jaideep Mahendra — IT Operations & Supply Chain Specialist',
-    description: 'Portfolio of Jaideep Mahendra, an IT Operations & Supply Chain Specialist specializing in IT asset management, ERP systems, and supply chain logistics.',
+    title: 'Jaideep Mahendra — IT Support & Data Analysis',
+    description: 'Jaideep Mahendra: IT support, ERP administration, asset lifecycle management, and data analysis. Explore resume-based experience and five working portfolio demos.',
     keywords: ['IT operations', 'supply chain', 'ERP', 'asset management', 'portfolio', 'Jaideep Mahendra'],
     authors: [{ name: 'Jaideep Mahendra' }],
     openGraph: {
-        title: 'Jaideep Mahendra — IT Operations & Supply Chain Specialist',
+        title: 'Jaideep Mahendra — IT Support & Data Analysis',
         description: 'IT Operations & Supply Chain Specialist specializing in modern workflows.',
         type: 'website',
     },
